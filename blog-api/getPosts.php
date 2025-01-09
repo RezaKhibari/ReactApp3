@@ -1,17 +1,14 @@
 <?php
-header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
+include 'blog_db.php';
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$limit = 5;
+$offset = ($page - 1) * $limit;
 
-require 'blog_db.php';
+$stmt = $conn->prepare("SELECT * FROM posts LIMIT ? OFFSET ?");
+$stmt->bind_param("ii", $limit, $offset);
+$stmt->execute();
+$result = $stmt->get_result();
 
-$sql = "SELECT * FROM posts ORDER BY created_at DESC";
-$result = $conn->query($sql);
-
-$posts = [];
-while ($row = $result->fetch_assoc()) {
-    $posts[] = $row;
-}
-
+$posts = $result->fetch_all(MYSQLI_ASSOC);
 echo json_encode($posts);
-$conn->close();
 ?>
