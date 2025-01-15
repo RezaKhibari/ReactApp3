@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles/LoginForm.css'; // Ensure the CSS file is correctly imported
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
@@ -17,19 +18,19 @@ const LoginForm = () => {
     };
 
     return (
-        <form onSubmit={handleLogin}>
+        <form className="login-form" onSubmit={handleLogin}>
             <h2>Login</h2>
-            <input 
-                type="email" 
-                placeholder="Email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
+            <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
             />
-            <input 
-                type="password" 
-                placeholder="Password" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
+            <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
             />
             <button type="submit">Login</button>
         </form>

@@ -1,0 +1,19 @@
+.post-details {
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-details h1 {
+    font-size: 2rem;
+    color: #007BFF;
+}
+
+.post-details p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 15px 0;
+}

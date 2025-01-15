@@ -1,0 +1,30 @@
+.create-post {
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.create-post h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #28A745;
+    margin-bottom: 20px;
+}
+
+.create-post form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.create-post form input,
+.create-post form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import API from '../../src/api';
+import '../styles/PostsList.css';
 
 const PostsList = () => {
     const [posts, setPosts] = useState([]);

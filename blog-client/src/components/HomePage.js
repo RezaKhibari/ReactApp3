@@ -1,33 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/HomePage.css';
 
 const HomePage = () => {
     return (
-        <div style={{ textAlign: 'center', padding: '50px' }}>
-            <h1>Welcome to My Blog</h1>
-            <p>Explore posts, create your own, and stay updated with the latest content!</p>
+        <div className="home-page">
+            <h1 className="home-title">Welcome to My Blog</h1>
+            <p className="home-description">Explore posts, create your own, and stay updated with the latest content!</p>
             
-            <div style={{ marginTop: '20px' }}>
+            <div className="home-buttons">
                 {/* Existing Buttons */}
-                <Link to="/" style={{ marginRight: '10px', textDecoration: 'none' }}>
-                    <button style={{ padding: '10px 20px', fontSize: '16px' }}>View Posts</button>
+                <Link to="/posts" className="btn btn-primary">
+                    View Posts
                 </Link>
-                <Link to="/create" style={{ marginRight: '10px', textDecoration: 'none' }}>
-                    <button style={{ padding: '10px 20px', fontSize: '16px' }}>Create a Post</button>
+                <Link to="/create" className="btn btn-warning">
+                    Create a Post
                 </Link>
             </div>
 
-            <div style={{ marginTop: '20px' }}>
+            <div className="auth-buttons">
                 {/* New Login and Signup Buttons */}
-                <Link to="/login" style={{ marginRight: '10px', textDecoration: 'none' }}>
-                    <button style={{ padding: '10px 20px', fontSize: '16px', backgroundColor: '#007BFF', color: 'white', border: 'none', borderRadius: '5px' }}>
-                        Login
-                    </button>
+                <Link to="/login" className="btn btn-login">
+                    Login
                 </Link>
-                <Link to="/signup" style={{ textDecoration: 'none' }}>
-                    <button style={{ padding: '10px 20px', fontSize: '16px', backgroundColor: '#28A745', color: 'white', border: 'none', borderRadius: '5px' }}>
-                        Signup
-                    </button>
+                <Link to="/signup" className="btn btn-signup">
+                    Signup
                 </Link>
             </div>
         </div>

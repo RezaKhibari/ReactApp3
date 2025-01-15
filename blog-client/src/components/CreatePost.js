@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import API from '../../src/api';
+import '../styles/CreatePost.css';
 
 const CreatePost = () => {
     const [title, setTitle] = useState('');
